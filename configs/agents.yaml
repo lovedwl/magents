@@ -1,0 +1,37 @@
+# Agent 配置文件
+# 定义各个 Agent 的角色、能力和提示词
+
+planner:
+  name: "Planner Agent"
+  description: "任务规划与调度智能体，负责理解用户需求、拆解任务、生成DAG工作流"
+  model: "deepseek-chat"
+  temperature: 0.7
+  max_tokens: 2000
+
+weather:
+  name: "Weather Agent"
+  description: "天气分析智能体，负责气象数据分析和风险评估"
+  model: "deepseek-chat"
+  temperature: 0.3
+  max_tokens: 1500
+
+traffic:
+  name: "Traffic Agent"
+  description: "交通评估智能体，负责交通流量分析和影响评估"
+  model: "deepseek-chat"
+  temperature: 0.3
+  max_tokens: 1500
+
+resource:
+  name: "Resource Agent"
+  description: "资源调配智能体，负责应急资源分配和优化"
+  model: "deepseek-chat"
+  temperature: 0.3
+  max_tokens: 1500
+
+reflection:
+  name: "Reflection Agent"
+  description: "结果融合智能体，负责汇总各Agent输出并生成最终决策报告"
+  model: "deepseek-chat"
+  temperature: 0.5
+  max_tokens: 3000

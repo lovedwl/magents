@@ -1,0 +1,34 @@
+{
+  "name": "城市暴雨应急响应",
+  "description": "某城市突发暴雨，需要制定应急响应方案",
+  "task": "某城市气象台发布暴雨红色预警，预计未来6小时降雨量将超过100毫米。请制定应急响应方案。",
+  "expected_dag": {
+    "nodes": [
+      {
+        "id": "weather_1",
+        "agent_type": "weather",
+        "task": "分析暴雨天气状况和风险等级"
+      },
+      {
+        "id": "traffic_1",
+        "agent_type": "traffic",
+        "task": "评估暴雨对交通的影响"
+      },
+      {
+        "id": "resource_1",
+        "agent_type": "resource",
+        "task": "制定应急资源调配方案"
+      },
+      {
+        "id": "reflection_1",
+        "agent_type": "reflection",
+        "task": "融合各领域分析，生成最终应急响应方案"
+      }
+    ],
+    "edges": [
+      {"source": "weather_1", "target": "reflection_1"},
+      {"source": "traffic_1", "target": "reflection_1"},
+      {"source": "resource_1", "target": "reflection_1"}
+    ]
+  }
+}

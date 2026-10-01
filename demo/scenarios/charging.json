@@ -1,0 +1,34 @@
+{
+  "name": "新能源充电规划",
+  "description": "为新能源车主制定充电规划方案",
+  "task": "一位新能源车主需要从北京驾车到上海，全程约1200公里。请制定充电规划方案。",
+  "expected_dag": {
+    "nodes": [
+      {
+        "id": "demand_1",
+        "agent_type": "demand",
+        "task": "分析充电需求和行程特点"
+      },
+      {
+        "id": "station_1",
+        "agent_type": "station",
+        "task": "评估沿途充电站情况"
+      },
+      {
+        "id": "planning_1",
+        "agent_type": "planning",
+        "task": "制定充电规划方案"
+      },
+      {
+        "id": "reflection_1",
+        "agent_type": "reflection",
+        "task": "融合分析，生成最终充电方案"
+      }
+    ],
+    "edges": [
+      {"source": "demand_1", "target": "planning_1"},
+      {"source": "station_1", "target": "planning_1"},
+      {"source": "planning_1", "target": "reflection_1"}
+    ]
+  }
+}

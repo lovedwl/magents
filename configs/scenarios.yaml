@@ -1,0 +1,21 @@
+# 演示场景配置
+
+emergency_response:
+  name: "城市暴雨应急响应"
+  description: "某城市突发暴雨，需要制定应急响应方案"
+  sample_input: "某城市气象台发布暴雨红色预警，预计未来6小时降雨量将超过100毫米。请制定应急响应方案。"
+  agents:
+    - weather
+    - traffic
+    - resource
+    - reflection
+
+charging_planning:
+  name: "新能源充电规划"
+  description: "为新能源车主制定充电规划方案"
+  sample_input: "一位新能源车主需要从北京驾车到上海，全程约1200公里。请制定充电规划方案。"
+  agents:
+    - demand
+    - station
+    - planning
+    - reflection
